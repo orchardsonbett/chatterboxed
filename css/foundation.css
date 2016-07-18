@@ -24,7 +24,7 @@ html {
    */
 body {
   margin: 0;
-}
+border: 5px #777 solid;}
 
 /* HTML5 display definitions
      ========================================================================== */
@@ -372,7 +372,9 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit; }
+  box-sizing: border-box;
+    margin: 0;
+}
 
 body {
   padding: 0;
@@ -939,7 +941,7 @@ button {
   .medium-collapse .row,
   .expanded.row .medium-collapse.row {
     margin-left: 0;
-    margin-right: 0; }
+    margin-right: 0;background-image: url(../img/form_green_shadow_dark_85047_1920x1080.jpg);height: 100%; }
   .medium-uncollapse > .column, .medium-uncollapse > .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
@@ -1067,7 +1069,8 @@ button {
   .large-offset-10 {
     margin-left: 83.33333%; }
   .large-12 {
-    width: 100%; }
+    width: 100%;
+    text-align: center;}
   .large-offset-11 {
     margin-left: 91.66667%; }
   .large-up-1 > .column, .large-up-1 > .columns {
