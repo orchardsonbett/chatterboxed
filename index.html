@@ -8,54 +8,73 @@
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <script language="JavaScript">
+        function showInput() {
+            document.getElementById('display').innerHTML =
+                document.getElementById("user_input").value;
+        }
+
+    </script>
 </head>
 
 <body>
-    <header>
-        <div>
-            <h1>Chatterbox</h1>
-        </div>
-    </header>
-    <div class="row">
-        <div class="large-12 columns">
-            <div class="display">
+    <section class="body">
+        <header>
+            <div>
+                <h1>Chatterbox</h1>
+            </div>
+        </header>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="display">
 
-            </div>
-            <div class="name">
-                <label>
-                    Type of flower
-                    <select name="Type" required>
-                        <option value="1">rose</option>
-                        <option value="2">carn</option>
-                        <option value="3">dahl</option>
-                        <option value="4">curcum</option>
-                        <option value="5">gard</option>
-                        <option value="6">hyac</option>
-                        <option value="7">peon</option>
-                        <option value="8">sweety</option>
-                        <option value="9">tul</option>
-                        <option value="10">succud</option>
-                        <option value="11">star</option>
-                        <option value="12">scab</option>
-                    </select>
-                </label>
-            </div>
-            <div class="form">
+                </div>
+                <div class="name">
+                    <label>
+                        <select name="Type" required>
+                            <option value="1">rose</option>
+                            <option value="2">carn</option>
+                            <option value="3">dahl</option>
+                            <option value="4">curcum</option>
+                            <option value="5">gard</option>
+                            <option value="6">hyac</option>
+                            <option value="7">peon</option>
+                            <option value="8">sweety</option>
+                            <option value="9">tul</option>
+                            <option value="10">succud</option>
+                            <option value="11">star</option>
+                            <option value="12">scab</option>
+                        </select>
+                    </label>
+                </div>
                 <form>
-                    <fieldset>
-                        <labela>
-                            <textarea name="comment">
-                            </textarea>
-                        </labela>
-                    </fieldset>
-                    <input class="button" type="submit" onclick="show message()" value="submit">
+                    <label><b>Enter a Message</b></label>
+                    <input type="text" name="message" id="user_input">
                 </form>
+
+                <input type="submit" onclick="showInput();">
+                <br/>
+                <label>Your input: </label>
+                <p><span id='display'></span></p>
             </div>
         </div>
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/vendor/what-input.js"></script>
-        <script src="js/vendor/foundation.js"></script>
-        <script src="js/app.js"></script>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAvcMRBKl2uSYUx62YGLZnvAchGrjXwkM8",
+            authDomain: "chatterboxed-6aa89.firebaseapp.com",
+            databaseURL: "https://chatterboxed-6aa89.firebaseio.com",
+            storageBucket: "chatterboxed-6aa89.appspot.com",
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

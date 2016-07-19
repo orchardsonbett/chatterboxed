@@ -1,5 +1,8 @@
-
-
 .name {
     padding-right: 0;
+}
+
+.body {
+    background-image: url(../img/Neon-3D-HD-Wallpaper-Desktop.jpg);
+    height: 100%;
 }
